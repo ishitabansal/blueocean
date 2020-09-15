@@ -5,12 +5,16 @@ pipeline{
           steps{
           echo 'Build Stage'
           }
-      }  
+      }
       stage('Test'){
           steps{
-          echo 'Build Test'
+          echo 'mvn Test'
           }
       }
-        
-  }
+       stage('Clean'){
+          steps{
+          echo 'Clean Stage'
+          }
+      }
+    }
 }
